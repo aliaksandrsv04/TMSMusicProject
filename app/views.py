@@ -51,6 +51,8 @@ def main_view(request):
         'selected_genre': genre_id,
         'is_connected': is_connected
     })
+
+@login_required(login_url='login')
 def playlist_view(request):
         user = request.user
 
