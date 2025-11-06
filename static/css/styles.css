@@ -1,0 +1,280 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+main {
+    flex: 1;
+}
+
+.simple-carousel {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Фиксированная высота */
+    overflow: hidden;
+}
+
+.simple-carousel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Показываем первую картинку по умолчанию */
+.simple-carousel img:first-child {
+    opacity: 1;
+}
+
+/* При наведении показываем соответствующую картинку */
+.simple-carousel:hover img:first-child {
+    opacity: 0;
+}
+
+.simple-carousel:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+.simple-carousel:hover img:nth-child(3) {
+    opacity: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.button1 {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button1:hover {
+    background-color: #555;
+}
+
+.register-link {
+    text-align: center;
+    color: #666;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.login-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.login-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+.register-link {
+    text-align: center;
+    color: #666;
+}
+
+.register-link a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+.sum {
+transition: all 0.3s ease;
+position: fixed;
+bottom: 7%;
+left: 0;
+right: 0;
+background: white;
+padding: 15px; text-align: center;
+box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+.sum:hover {
+    background: #e9ecef; /* ← меняет фон при наведении */
+    color: #50c878; /* ← меняет цвет текста */
+}
+.orders{
+border: 2px solid #333;
+padding: 20px;
+margin 0;
+border-radius: 10px;
+background: #ffffff;
+background-color: #white
+}
+
+.liorder{
+display: flex;
+justify-content: space-between;
+ flex-direction: column;
+    align-items: flex-start;
+border-bottom: 1px solid #eee;
+padding: 10px 0;
+}
+
+.alert-success {
+    background: #f0f9f0;
+    color: #1a531b;
+    padding: 15px;
+    border: 2px solid #2d6a2d;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.pagination-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f8f9fa;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.pagination-btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color:  #212529;
+    border: 1px solid  #212529;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.pagination-btn:hover {
+    background: #212529;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.pagination-info {
+    color: #495057;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-logout {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-logout:hover {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;

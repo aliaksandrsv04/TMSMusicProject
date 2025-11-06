@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="login-container">
+    <h1 class="login-title">Регистрация</h1>
+    <div class ="form1">
+    <form method="post" class="login-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <div class = "button1">
+        <button type="submit" class="login-button">Зарегистрироваться</button>
+        </div>
+    </form>
+    </div>
+    <p class="register-link">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
+</body>
+</html>
